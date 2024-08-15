@@ -96,6 +96,7 @@ export default function ProgramCard({ cards, handleClick }) {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
+
                     gap: 2,
                   }}
                 >
@@ -109,7 +110,7 @@ export default function ProgramCard({ cards, handleClick }) {
                     <Box
                       sx={{
                         display: "flex",
-                        alignItems: "center",
+                        // alignItems: "flex-end",
                         gap: 1,
                       }}
                     >
@@ -209,8 +210,9 @@ export default function ProgramCard({ cards, handleClick }) {
                       backgroundColor: Colors.primary,
                       borderRadius: 2,
                       textAlign: "center",
-                      justifyContent: "center",
-                      justifyItems: "center",
+                      // justifyContent: "center",
+                      // justifyItems: "center",
+                      marginBottom: 0
                     }}
                   >
                     <Button

@@ -301,7 +301,7 @@ export default function HomePage() {
           }}
         />
       </Box>
-      
+
       <Box
         component="section"
         id="feature-section"
@@ -606,8 +606,6 @@ export default function HomePage() {
         </Box>
       </Box>
 
-      
-
       <Box
         sx={{
           width: '100%',
@@ -639,6 +637,7 @@ export default function HomePage() {
               p: 0,
               letterSpacing: '2%',
               textAlign: { xs: 'center', sm: 'left' },
+              textTransform: 'capitalize'
             }}>
             Eduvacity
           </Typography>
@@ -652,8 +651,9 @@ export default function HomePage() {
               },
               color: '#B9C8CD',
               textAlign: { xs: 'center', sm: 'left' },
+              textTransform: 'none',
             }}>
-            {EDUVACITY_VALUE}
+            {EDUVACITY_VALUE.charAt(0).toUpperCase() + EDUVACITY_VALUE.slice(1).toLowerCase()}
           </Typography>
           <Box
             sx={{
@@ -692,7 +692,7 @@ export default function HomePage() {
       {/* FREQUENTLY ASK QUESTION */}
       <Box
         component="section"
-        id="hero-section"
+        id="hero-section faqs "
         sx={{
           width: '100%',
           display: 'flex',
@@ -702,6 +702,7 @@ export default function HomePage() {
           backgroundColor: Colors.light,
         }}>
         <Box
+        id="faqs "
           sx={{
             width: '100%',
             display: 'flex',
