@@ -35,8 +35,9 @@ export default function FooterPage() {
       }}>
       <Box
         sx={{
-          width: '100%',
+          width: '90%',
           display: 'flex',
+          justifyContent: 'space-between',
           flexDirection: { xs: 'column', md: 'row' },
           gap: { xs: 4, md: 4, lg: 10, xl: 9 },
           pl: { xs: 4, sm: 3, lg: 5, xl: 16 },
@@ -194,7 +195,7 @@ export default function FooterPage() {
         sx={{
           width: '100%',
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           justifyContent: 'space-between',
           gap: '64px',
           padding: '48px 0 48px 0',
@@ -204,7 +205,7 @@ export default function FooterPage() {
         }}>
         <Box
           sx={{
-            width: '100%',
+            width: '90%',
             display: 'flex',
             flexDirection: { xs: 'column', sm: 'row' },
             justifyContent: 'space-between',
