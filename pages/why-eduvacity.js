@@ -1,4 +1,11 @@
-import { Box, Card, CssBaseline, Divider, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CssBaseline,
+  Divider,
+  Grid,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -86,6 +93,7 @@ export default function WhyEduvasityPage() {
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
+                justifyContent: "center",
                 gap: "16px",
               }}
             >
@@ -112,7 +120,8 @@ export default function WhyEduvasityPage() {
                   display: "flex",
                   flexDirection: { xs: "column", sm: "row" },
                   gap: { xs: "12px", sm: "64px" },
-                  alignItems: 'center'
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <Box sx={{ width: "100%", maxWidth: 672 }}>
@@ -159,74 +168,47 @@ export default function WhyEduvasityPage() {
         </Box>
       </Box>
       {/* ACCESS SECTION */}
+
       <Box
         component="section"
-        id="access-section"
+        id="feature-section"
         sx={{
           width: "100%",
           display: "flex",
-          flexDirection: "row",
-          pt: { xs: 6.5, md: 12.5 },
-          pb: { xs: 2, md: 12.5 },
+          flexDirection: "column",
+          px: "10%",
+          my: 10,
           backgroundColor: Colors.light,
+          gap: { xs: 2, sm: 12 },
         }}
       >
         <Box
           sx={{
-            width: "100%",
+            width: "80%",
+            height: { xs: 650, sm: 460 },
             display: "flex",
-            flexDirection: "column",
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "center",
-            alignItems: "center",
-            px: { xs: 3, sm: 8.5, md: 5.5, lg: 7.2, xl: 12.5 },
-            gap: 8,
+            margin: "auto",
           }}
         >
           <Box
             sx={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: { xs: "40px", sm: "80px" },
+              width: { xs: "50%", sm: "50%" },
+              display: { xs: "none", sm: "flex" },
+              alignContent: "center",
             }}
           >
-            <Box
-              sx={{
-                width: "100%",
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                gap: { xs: "30px", sm: "64px" },
-              }}
-            >
-              <Card
-                sx={{
-                  width: "100%",
-                  background: Colors.secondary,
-                  borderRadius: "12px",
-                  boxShadow: "none",
-                  px: { xs: 2, sm: 5 },
-                  py: { xs: 2, sm: 8 },
-                  display: { xs: "none", sm: "flex" },
-                }}
-              >
-                <Box
-                  sx={{
-                    maxWidth: "100%",
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    alignItems: "center",
-                    flexDirection: "column",
-                    gap: "4px",
-                  }}
-                >
+            <Grid sx={{ justifyContent: 'center',  alignItems: "center"}} container columnGap={10} rowSpacing={2} >
+                <Grid xs={5} sm={3}>
                   <Box
                     sx={{
-                      width: "100%",
                       display: "flex",
                       flexDirection: "column",
-                      gap: 4,
-                      p: 4,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
+                      gap: 2,
+                      p: 2,
+                      border: "1px solid ",
+                      borderColor: Colors.secondary,
                       borderRadius: 1,
                       alignItems: "center",
                     }}
@@ -235,24 +217,27 @@ export default function WhyEduvasityPage() {
                     <Typography
                       variant="span"
                       sx={{
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.light,
-                        letterSpacing: { xs: "0em", sm: "-0.02em" },
-                        textAlign: "left",
+                        width: "100%",
+                        font: `normal  900 14px/18px ${Fonts.primary}`,
+                        color: Colors.secondary,
+                        textAlign: "center",
+                        fontFamily: Fonts.secondary
                       }}
                     >
-                      Collaborates with experts institutions to offer courses
-                      aligned with industry needs
+                      Industry-aligned courses
                     </Typography>
                   </Box>
+                </Grid>
+                <Grid xs={3}>
                   <Box
                     sx={{
                       width: "100%",
                       display: "flex",
                       flexDirection: "column",
-                      gap: 4,
-                      p: 1,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
+                      gap: 2,
+                      p: 2,
+                      border: "1px solid ",
+                      borderColor: Colors.secondary,
                       borderRadius: 1,
                       alignItems: "center",
                     }}
@@ -264,25 +249,26 @@ export default function WhyEduvasityPage() {
                       variant="span"
                       sx={{
                         width: "100%",
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.light,
-                        m: 0,
-                        p: 0,
-                        letterSpacing: { xs: "0em", sm: "-0.02em" },
+                        font: `normal  900 14px/18px ${Fonts.primary}`,
+                        color: Colors.secondary,
+                        textAlign: "center",
+                        fontFamily: Fonts.secondary
                       }}
                     >
-                      Leverage Convenience and Accessibility
+                      Convenience and accessibility.
                     </Typography>
                   </Box>
-
+                </Grid>
+                <Grid xs={3}>
                   <Box
                     sx={{
                       width: "100%",
                       display: "flex",
                       flexDirection: "column",
-                      gap: 4,
-                      p: 1,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
+                      gap: 2,
+                      p: 2,
+                      border: "1px solid ",
+                      borderColor: Colors.secondary,
                       borderRadius: 1,
                       alignItems: "center",
                     }}
@@ -294,17 +280,17 @@ export default function WhyEduvasityPage() {
                       variant="span"
                       sx={{
                         width: "100%",
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.light,
-                        m: 0,
-                        p: 0,
-                        letterSpacing: "-0.02em",
+                        font: `normal  900 14px/18px ${Fonts.primary}`,
+                        color: Colors.secondary,
+                        textAlign: "center",
+                        fontFamily: Fonts.secondary
                       }}
                     >
-                      Get a Personalize Learning Experience Tailored for You
+                      Personalized Learning Experience
                     </Typography>
                   </Box>
-
+                </Grid>
+                <Grid xs={3}>
                   <Box
                     sx={{
                       width: "100%",
@@ -312,245 +298,129 @@ export default function WhyEduvasityPage() {
                       flexDirection: "column",
                       gap: 4,
                       p: 1,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
+                      border: "1px solid",
+                      // borderColor: Colors.secondary,
                       borderRadius: 1,
                       alignItems: "center",
                     }}
                   >
                     <Box>
-                      <PeopleCommunityAvater />
+                      <PeopleCommunityAvater  />
                     </Box>
                     <Typography
                       variant="span"
                       sx={{
                         width: "100%",
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.light,
-                        m: 0,
-                        p: 0,
-                        letterSpacing: "-0.02em",
+                        font: `normal  900 14px/18px ${Fonts.primary}`,
+                        color: Colors.secondary,
+                        textAlign: "center",
+                        fontFamily: Fonts.secondary
                       }}
                     >
-                      Enhanced Collaboration & Cost Effective Education
+                      Cost-Effective Education
                     </Typography>
                   </Box>
-                </Box>
-              </Card>
+                </Grid>
+              </Grid>
+          </Box>
 
 
-              <Box
-                sx={{
-                  maxWidth: 560,
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: "16px",
-                  mt: { xs: 0, sm: 5, md: 10 },
-                }}
-              >
+          <Box
+            sx={{
+              width: { xs: "80%", md: "50%" },
+              pt: { xs: 0, md: 8.5 },
+            }}
+          >
+            <Card
+              sx={{
+                boxShadow: "none",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                gap: "32px",
+                background: "transparent",
+              }}
+            >
+              
+              <Box sx={{ width: "100%" }}>
                 <Typography
-                  variant="h1"
+                  gutterBottom
+                  variant="h4"
+                  component="div"
                   sx={{
-                    width: "100%",
                     font: {
-                      xs: `normal normal 600 normal 25px/36px ${Fonts.primary}`,
-                      md: `normal normal 600 normal 36px/44px ${Fonts.primary}`,
+                      xs: `normal normal 600 normal 25px/36px ${Fonts.Demi}`,
+                      sm: `normal normal 600 normal 30px/36px ${Fonts.Demi}`,
                     },
                     color: Colors.dark,
-                    m: 0,
-                    p: 0,
                     letterSpacing: "-0.02em",
-                    textTransform: "capitalize",
                   }}
                 >
                   {WHY_EDUVACITY_VALUE}
                 </Typography>
-                <Box
-                  component="span"
-                  sx={{
-                    maxWidth: 840,
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
+                
+              </Box>
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
+                }}
+              >
+                <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
+                  
                   <Typography
-                    variant="span"
+                    gutterBottom
+                    variant="h6"
+                    component="div"
                     sx={{
                       font: {
                         xs: `normal normal 400 14px/18px ${Fonts.inter}`,
                         sm: `normal normal 400 14px/18px ${Fonts.inter}`,
                       },
-                      color: Colors.textPrimaryDark,
+                      color: "#475467",
+                      letterSpacing: "0em",
+                      textAlign: "left",
                     }}
                   >
-                    {WHY_EDUVACITY_VALUE_DESC}
+                    
+                {WHY_EDUVACITY_VALUE_DESC}
+        
                   </Typography>
-                  <Box sx={{ width: 180, mt: 3 }}>
-                    <Box
-                      onClick={() => router.push(`${goToPortal}/signup`)}
-                      sx={{
-                        padding: "12px 20px 12px 20px",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        font: `normal normal 500 normal 16px/19.2px ${Fonts.primary}`,
-                        cursor: "pointer",
-                        color: "rgba(230, 244, 237, 1)",
-                        borderRadius: "46px",
-                        background: Colors.primary,
-                        "&:hover": {
-                          background: Colors.primary,
-                        },
-                      }}
-                    >
-                      Get started <ArrowUp />
-                    </Box>
-                  </Box>
                 </Box>
-              </Box>
-              <Card
-                sx={{
-                  width: "100%",
-                  background: Colors.secondary,
-                  borderRadius: "12px",
-                  boxShadow: "none",
-                  px: 2,
-                  py: 4,
-                  display: { xs: "block", sm: "none" },
-                  my: 4,
-                }}
-              >
+               
+
                 <Box
+                  onClick={() => router.push(`${goToPortal}/signup`)}
                   sx={{
-                    maxWidth: "100%",
+                    height: 48,
+                    width: 160,
+                    mt: 3,
+                    padding: "12px 20px 12px 20px",
                     display: "flex",
-                    justifyContent: "flex-start",
+                    justifyContent: "center",
                     alignItems: "center",
-                    flexDirection: "column",
-                    gap: "16px",
+                    font: `normal normal 500 normal 16px/19.2px ${Fonts.primary}`,
+                    cursor: "pointer",
+                    color: "rgba(230, 244, 237, 1)",
+                    borderRadius: "46px",
+                    background: Colors.primary,
+                    "&:hover": {
+                      background: Colors.primary,
+                    },
                   }}
                 >
-                  <Box
-                    sx={{
-                      width: "100%",
-                      display: "flex",
-                      gap: 1,
-                      background: "rgba(255, 255, 255, 0.4)",
-                      p: 1,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      borderRadius: 1,
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box>
-                      <StackBookAvatar />
-                    </Box>
-                    <Typography
-                      variant="span"
-                      sx={{
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.light,
-                        letterSpacing: { xs: "0em", sm: "-0.02em" },
-                        textAlign: "left",
-                      }}
-                    >
-                      Collaborates with experts institutions to offer courses
-                      aligned with industry needs
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      width: "100%",
-                      display: "flex",
-                      gap: 1,
-                      background: "rgba(255, 255, 255, 0.4)",
-                      p: 1,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      borderRadius: 1,
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box>
-                      <MonitorIcon />
-                    </Box>
-                    <Typography
-                      variant="span"
-                      sx={{
-                        width: "100%",
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.light,
-                        m: 0,
-                        p: 0,
-                        letterSpacing: "-0.02em",
-                      }}
-                    >
-                      Leverage Convenience and Accessibility
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      width: "100%",
-                      display: "flex",
-                      gap: 1,
-                      background: "rgba(255, 255, 255, 0.4)",
-                      p: 1,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      borderRadius: 1,
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box>
-                      <PeopleAvarter />
-                    </Box>
-                    <Typography
-                      variant="span"
-                      sx={{
-                        width: "100%",
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.light,
-                        m: 0,
-                        p: 0,
-                        letterSpacing: "-0.02em",
-                      }}
-                    >
-                      Get a Personalize Learning Experience Tailored for You
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      width: "100%",
-                      display: "flex",
-                      gap: 1,
-                      background: "rgba(255, 255, 255, 0.4)",
-                      p: 1,
-                      border: "1px solid rgba(255, 255, 255, 0.3)",
-                      borderRadius: 1,
-                      alignItems: "center",
-                    }}
-                  >
-                    <Box>
-                      <PeopleCommunityAvater />
-                    </Box>
-                    <Typography
-                      variant="span"
-                      sx={{
-                        font: `normal normal 500 normal 14px/18px ${Fonts.primary}`,
-                        color: Colors.dark,
-                        m: 0,
-                        p: 0,
-                        letterSpacing: "0.12em",
-                      }}
-                    >
-                      {/* Enhanced Collaboration & Cost Effective Education */}
-                    </Typography>
-                  </Box>
+                  Get started <ArrowUp />
                 </Box>
-              </Card>
-            </Box>
+              </Box>
+            </Card>
           </Box>
         </Box>
       </Box>
+
+
+      
       {/* FEATURES SECTION */}
       <Box sx={{ marginBottom: 10, px: { xs: 3, sm: 3, lg: 12.5, xl: 16 } }}>
         <Divider
@@ -559,7 +429,6 @@ export default function WhyEduvasityPage() {
           }}
         />
       </Box>
-
       <Box
         component="section"
         id="feature-section"
@@ -964,7 +833,6 @@ export default function WhyEduvasityPage() {
         </Box>
       </Box>
 
-        
       {/* Career Support */}
       <Box
         component="section"
@@ -979,162 +847,162 @@ export default function WhyEduvasityPage() {
           gap: { xs: 2, sm: 12 },
         }}
       >
-      <Box
-        sx={{
-          width: "80%",
-          height: { xs: 650, sm: 460 },
-          display: "flex",
-          flexDirection: { xs: "column-reverse", md: "row-reverse" },
-          gap: 8,
-          justifyContent: "center",
-          alignContent: "center",
-          margin: "auto",
-        }}
-      >
         <Box
           sx={{
-            width: { xs: "50%", sm: "50%" },
-            backgroundImage: "url('/images/gallery.svg')",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            display: { xs: "none", sm: "flex" },
+            width: "80%",
+            height: { xs: 650, sm: 460 },
+            display: "flex",
+            flexDirection: { xs: "column-reverse", md: "row-reverse" },
+            gap: 8,
+            justifyContent: "center",
             alignContent: "center",
-          }}
-        />
-        <Box
-          sx={{
-            width: { xs: "80%", md: "50%" },
-            pt: { xs: 0, md: 8.5 },
+            margin: "auto",
           }}
         >
-          <Card
+          <Box
             sx={{
-              boxShadow: "none",
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: "32px",
-              background: "transparent",
+              width: { xs: "50%", sm: "50%" },
+              backgroundImage: "url('/images/gallery.svg')",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              display: { xs: "none", sm: "flex" },
+              alignContent: "center",
+            }}
+          />
+          <Box
+            sx={{
+              width: { xs: "80%", md: "50%" },
+              pt: { xs: 0, md: 8.5 },
             }}
           >
-            <Box>
-              <PeopleIcon />
-            </Box>
-            <Box sx={{ width: "80%" }}>
-              <Typography
-                gutterBottom
-                variant="h4"
-                component="div"
-                sx={{
-                  font: {
-                    xs: `normal normal 600 normal 25px/36px ${Fonts.Demi}`,
-                    sm: `normal normal 600 normal 30px/36px ${Fonts.Demi}`,
-                  },
-                  color: Colors.dark,
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                Career Support
-              </Typography>
-              <Box sx={{ width: "80%", display: "flex", gap: "12px" }}>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  sx={{
-                    font: {
-                      xs: `normal normal 400 14px/18px ${Fonts.secondary}`,
-                      sm: `normal normal 400 14px/18px ${Fonts.secondary}`,
-                    },
-                    color: "#475467",
-                    letterSpacing: "0em",
-                    textAlign: "left",
-                  }}
-                >
-                  Get personalised career advice through 1-1 sessions with
-                  industry mentors
-                </Typography>
-              </Box>
-            </Box>
-            <Box
+            <Card
               sx={{
+                boxShadow: "none",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                gap: "12px",
+                gap: "32px",
+                background: "transparent",
               }}
             >
-              <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
-                <Box>
-                  <CheckCircled />
-                </Box>{" "}
+              <Box>
+                <PeopleIcon />
+              </Box>
+              <Box sx={{ width: "80%" }}>
                 <Typography
                   gutterBottom
-                  variant="h6"
+                  variant="h4"
                   component="div"
                   sx={{
                     font: {
-                      xs: `normal normal 400 14px/18px ${Fonts.inter}`,
-                      sm: `normal normal 400 14px/18px ${Fonts.inter}`,
+                      xs: `normal normal 600 normal 25px/36px ${Fonts.Demi}`,
+                      sm: `normal normal 600 normal 30px/36px ${Fonts.Demi}`,
                     },
-                    color: "#475467",
-                    letterSpacing: "0em",
-                    textAlign: "left",
+                    color: Colors.dark,
+                    letterSpacing: "-0.02em",
                   }}
                 >
-                  Get interview ready via resume reviews, practice employment
-                  tests and mock interviews
+                  Career Support
                 </Typography>
+                <Box sx={{ width: "80%", display: "flex", gap: "12px" }}>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{
+                      font: {
+                        xs: `normal normal 400 14px/18px ${Fonts.secondary}`,
+                        sm: `normal normal 400 14px/18px ${Fonts.secondary}`,
+                      },
+                      color: "#475467",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                    }}
+                  >
+                    Get personalised career advice through 1-1 sessions with
+                    industry mentors
+                  </Typography>
+                </Box>
               </Box>
-              <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
-                <Box>
-                  <CheckCircled />
-                </Box>{" "}
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  sx={{
-                    font: {
-                      xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                      sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                    },
-                    color: "#475467",
-                    letterSpacing: "0em",
-                    textAlign: "left",
-                  }}
-                >
-                  Access to exclusive job opportunities through our partner
-                  companies and hiring drives
-                </Typography>
-              </Box>
-
               <Box
-                onClick={() => router.push(`${goToPortal}/signup`)}
                 sx={{
-                  height: 48,
-                  width: 160,
-                  mt: 3,
-                  padding: "12px 20px 12px 20px",
+                  width: "100%",
                   display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  font: `normal normal 500 normal 16px/19.2px ${Fonts.primary}`,
-                  cursor: "pointer",
-                  color: "rgba(230, 244, 237, 1)",
-                  borderRadius: "46px",
-                  background: Colors.primary,
-                  "&:hover": {
-                    background: Colors.primary,
-                  },
+                  flexDirection: "column",
+                  gap: "12px",
                 }}
               >
-                Get started <ArrowUp />
+                <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
+                  <Box>
+                    <CheckCircled />
+                  </Box>{" "}
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{
+                      font: {
+                        xs: `normal normal 400 14px/18px ${Fonts.inter}`,
+                        sm: `normal normal 400 14px/18px ${Fonts.inter}`,
+                      },
+                      color: "#475467",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                    }}
+                  >
+                    Get interview ready via resume reviews, practice employment
+                    tests and mock interviews
+                  </Typography>
+                </Box>
+                <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
+                  <Box>
+                    <CheckCircled />
+                  </Box>{" "}
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{
+                      font: {
+                        xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                        sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                      },
+                      color: "#475467",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                    }}
+                  >
+                    Access to exclusive job opportunities through our partner
+                    companies and hiring drives
+                  </Typography>
+                </Box>
+
+                <Box
+                  onClick={() => router.push(`${goToPortal}/signup`)}
+                  sx={{
+                    height: 48,
+                    width: 160,
+                    mt: 3,
+                    padding: "12px 20px 12px 20px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    font: `normal normal 500 normal 16px/19.2px ${Fonts.primary}`,
+                    cursor: "pointer",
+                    color: "rgba(230, 244, 237, 1)",
+                    borderRadius: "46px",
+                    background: Colors.primary,
+                    "&:hover": {
+                      background: Colors.primary,
+                    },
+                  }}
+                >
+                  Get started <ArrowUp />
+                </Box>
               </Box>
-            </Box>
-          </Card>
+            </Card>
+          </Box>
         </Box>
-      </Box>
       </Box>
       <JoinWaitlistDialog open={open} handleClose={handleClose} />
     </Box>
