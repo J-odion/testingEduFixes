@@ -31,7 +31,7 @@ export default function PageNotFound() {
         
         
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 10 }}>
-            <Button href="." variant="contained"><ArrowBack /> Go Back </Button>
+            <Button href="./" variant="contained"><ArrowBack /> Go Back </Button>
             <Button href="/" variant="contained"><Home /> Go Back Home</Button>
           </Box>
     

@@ -79,7 +79,7 @@ const questions = [
   {
     question: 'How much does tuition cost for eduvacity programs',
     answer:
-      'The starting point for our tuition fees is just 120,000 Naira per year. We also offer flexible payment plans to make financing your education convenient and manageable.',
+      'The starting point for our tuition fees is currently at 210,000 Naira per year. We also offer flexible payment plans to make financing your education convenient and manageable.',
   },
 ];
 export default function FrequentlyAskQuestions() {

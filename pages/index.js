@@ -34,7 +34,7 @@ import Link from 'next/link';
 
 
 
-const partners = [
+export const partners = [
   {
     name: 'Assetium Capital Management Limited',
     logo: '/images/assetium-logo.png',

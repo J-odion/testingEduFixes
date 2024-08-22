@@ -2409,11 +2409,11 @@ export function ChatIcon() {
     </svg>
   );
 }
-export function ZapIcon() {
+export function ZapIcon({width="49"}) {
   return (
     <svg
-      width="49"
-      height="49"
+      width={width}
+      height={width}
       viewBox="0 0 49 49"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
