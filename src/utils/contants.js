@@ -40,6 +40,11 @@ export const FOOTER_COMPANY = [
   // { title: 'Become an instructors', href: '/become-an-instructor' },
   // { title: 'Scholarships', href: '/scholarship' },
 ];
+export const FOOTER_SCHOLARSHIP = [
+  { title: 'Assetium 100%', href: '/scholarship/assetium' },
+  { title: 'Educate Her', href: '/scholarship' },
+  
+];
 
 //WHY EDUVACITY
 //

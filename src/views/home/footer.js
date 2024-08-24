@@ -16,6 +16,7 @@ import {
   FOOTER_COMPANY,
   FOOTER_COURSES,
   FOOTER_NOTE,
+  FOOTER_SCHOLARSHIP,
 } from '../../utils/contants';
 
 export default function FooterPage() {
@@ -109,7 +110,7 @@ export default function FooterPage() {
             alignItems: 'center',
           }}>
           <Grid container spacing={{ xs: 3, lg: 8 }}>
-            <Grid item xs={4} sm={3} md={4} lg={2.4}>
+            <Grid item xs={4} sm={3} md={4} >
               <Box
                 sx={{
                   width: '100%',
@@ -145,7 +146,7 @@ export default function FooterPage() {
               </Box>
             </Grid>
             
-            <Grid item xs={4} sm={3} md={4} lg={2.4}>
+            <Grid item xs={4} sm={3} md={4} >
               <Box
                 sx={{
                   width: { xs: '100%', sm: 146 },
@@ -186,6 +187,42 @@ export default function FooterPage() {
                   }}>
                   How to get started
                 </Link>
+              </Box>
+            </Grid>
+
+            <Grid item xs={4} sm={3} md={4} >
+              <Box
+                sx={{
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '16px',
+                  alignItems: 'flex-start',
+                  ml: { xs: 0, sm: 4, lg: 6, xl: 3 },
+                }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    textAlign: 'left',
+                    color: Colors.primary,
+                    font: `normal normal 600 normal 14px/20px ${Fonts.inter}`,
+                  }}>
+                  Scholarships
+                </Typography>
+                {FOOTER_SCHOLARSHIP.map((company, index) => (
+                  <Link
+                    key={`${company}_${index}`}
+                    underline="hover"
+                    href={company.href}
+                    sx={{
+                      textAlign: 'left',
+                      color: '#E6F4ED',
+                      font: `normal normal 600 normal 14px/24px ${Fonts.inter}`,
+                      letterSpacing: '0em',
+                    }}>
+                    {company.title}
+                  </Link>
+                ))}
               </Box>
             </Grid>
           </Grid>

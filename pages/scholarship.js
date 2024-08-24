@@ -9,7 +9,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { ArrowUp, PlayButton, WhatsApp, ZapIcon } from "../src/components/svg";
+import { AllGenderIcon, ArrowUp, BoltsIcon, DocsIcon, EduLogo, PlayButton, WhatsApp, ZapIcon } from "../src/components/svg";
 import { Colors } from "../src/components/themes/colors";
 import { Fonts } from "../src/components/themes/fonts";
 import {
@@ -23,6 +23,7 @@ import {
 
 import Intercom from "@intercom/messenger-js-sdk";
 import { ChildCareRounded, DocumentScannerRounded } from "@mui/icons-material";
+import Image from "next/image";
 
 export default function Scholarship() {
   const router = useRouter();
@@ -32,15 +33,15 @@ export default function Scholarship() {
 
   return (
     <div className="h-full  bg-white text-black">
-      <Box
+     <Box
         component="section"
         id="hero-section"
         sx={{
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          pt: { xs: 8, md: 15.5 },
-          pb: { xs: 8, md: 6.5 },
+          pt: { xs: 8, md: 12.5 },
+          pb: { xs: 8, md: 3.5 },
           backgroundRepeat: "repeat",
           backgroundSize: "cover",
           ustifyContent: "center",
@@ -50,7 +51,8 @@ export default function Scholarship() {
       >
         <Box
           sx={{
-            width: "100%",
+            width: { xs: "100%", sm: "80%" },
+            mx: "auto",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -58,6 +60,7 @@ export default function Scholarship() {
             px: { xs: "1rem", sm: "1rem", lg: 12.5, xl: 16 },
             gap: { xs: 4, sm: 8 },
             backgroundColor: Colors.light,
+            borderRadius: "10px",
           }}
         >
           <Box
@@ -68,6 +71,48 @@ export default function Scholarship() {
               gap: { xs: "40px", sm: "80px" },
             }}
           >
+            {/* logos */}
+            <Box
+              sx={{
+                width: "40%",
+                display: "flex",
+                flexDirection: "row",
+                mx: "auto",
+                justifyContent: 'center', alignItems: 'center'
+              }}
+            >
+              <Box
+                sx={{
+                  backgroundColor: Colors.primary,
+                  px: 1.7,
+                  py: 1,
+                  borderRadius: "100%",
+                }}
+              >
+                <EduLogo width="52" height="54" fill={Colors.light} />
+              </Box>
+
+              <Box
+                sx={{
+                  backgroundColor: Colors.light,
+                  borderColor: Colors.primary,
+                  px: 1.5,
+                  py: 1,
+                  borderRadius: "100%",
+                  border: `solid 2px ${Colors.primary}`,
+                  position: "relative",
+                  left: '-10px'
+                }}
+              >
+                <Image
+                  src="/images/zen.png"
+                  alt={"Zenith Bank PLC"}
+                  width={44}
+                  height={44}
+                />
+              </Box>
+            </Box>
+            {/* textsss */}
             <Box
               sx={{
                 width: "100%",
@@ -94,7 +139,7 @@ export default function Scholarship() {
               >
                 Zenith Bank Educate Her{" "}
                 <Typography variant="span" sx={{ color: Colors.primary }}>
-                  Scholarship
+                Scholarship
                 </Typography>{" "}
                 Program
               </Typography>
@@ -125,33 +170,14 @@ export default function Scholarship() {
                   sx={{
                     // maxWidth: 500,
                     display: "flex",
-                    flexDirection: { xs: "column", sm: "row" },
-                    gap: "24px",
-                    mt: { xs: 4, md: 12 },
+                    flexDirection: { xs: "row", sm: "row" },
+
+                    mt: { xs: 5, md: 10 },
                     justifyContent: "center",
                     alignItems: "center",
+                    mb: { xs: 4, sm: 1 },
                   }}
                 >
-                  <Box
-                    onClick={() => router.push(`${goToPortal}/signup`)}
-                    sx={{
-                      padding: "12px 20px 12px 20px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      font: `normal normal 500 normal 14px/[19.2px] ${Fonts.primary}`,
-                      cursor: "pointer",
-                      color: "rgba(230, 244, 237, 1)",
-                      borderRadius: "46px",
-
-                      background: Colors.primary,
-                      "&:hover": {
-                        background: Colors.primary,
-                      },
-                    }}
-                  >
-                    Apply Now <ArrowUp />
-                  </Box>
                   <Box
                     component="a"
                     target="_blank"
@@ -186,7 +212,9 @@ export default function Scholarship() {
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                gap: "16px",
+                gap: "35px",
+                mx: "auto",
+                my: "auto",
               }}
             >
               <Typography
@@ -196,7 +224,7 @@ export default function Scholarship() {
                     xs: `normal normal 400 normal 30px/36px ${Fonts.primary}`,
                     md: `normal normal 600 normal 36px/44px ${Fonts.primary}`,
                   },
-                  color: Colors.dark,
+                  color: Colors.secondary,
                   m: 0,
                   p: 0,
                   letterSpacing: "-2%",
@@ -218,7 +246,7 @@ export default function Scholarship() {
                       xs: `normal normal 400 normal 16px/28px ${Fonts.secondary}`,
                       sm: `normal normal 500 normal 20px/30px ${Fonts.secondary}`,
                     },
-                    color: Colors.grey,
+                    color: Colors.secondary,
                   }}
                 >
                   {EMPOWERMENT_DESC}
@@ -244,7 +272,7 @@ export default function Scholarship() {
                     style={{
                       position: "relative",
                       width: "100%",
-                      height: 516,
+                      height: 416,
                       // paddingBottom: '56.250%',
                     }}
                   >
@@ -289,7 +317,7 @@ export default function Scholarship() {
             backgroundRepeat: "repeat",
             backgroundSize: "cover",
             backgroundColor: Colors.secondary,
-            mt: 10,
+            mt: { xs: 40, sm: 1 },
           }}
         >
           <Box
@@ -305,51 +333,52 @@ export default function Scholarship() {
           >
             <Box
               sx={{
-                width: "100%",
+                width: "70%",
                 display: "flex",
                 flexDirection: { xs: "column", sm: "row" },
-                gap: { xs: "40px", sm: "80px" },
+                gap: { xs: "40px", sm: "10px" },
+                alignItems: "center",
+                justifyContent: { xs: "center", sm: "space-between" },
               }}
             >
               <Box
                 sx={{
                   width: "100%",
                   display: "flex",
-                  gap: "16px",
                 }}
               >
                 <Typography
                   variant="h1"
                   sx={{
-                    maxWidth: { xs: 340, sm: 1260 },
                     font: {
                       xs: `normal normal 600 normal 32px/48px ${Fonts.primary}`,
                       md: `normal normal 600 normal 50px/77px ${Fonts.primary}`,
                     },
                     color: Colors.light,
+                    width: "100%",
+                    textAlign: { xs: "center", sm: "left" },
                   }}
                 >
                   Our Goal
                 </Typography>
               </Box>
               <Box
-                component="div"
                 sx={{
-                  maxWidth: 1050,
+                  width: "100%",
                   display: "flex",
-                  flexDirection: "column",
-                  textAlign: "left",
                 }}
               >
                 <Typography
-                  variant="h1"
+                  gutterBottom
+                  variant="h6"
                   sx={{
                     font: {
-                      xs: `normal normal 400 normal 14px/18px ${Fonts.secondary}`,
-                      sm: `normal normal 400 normal 14px/18px ${Fonts.secondary}`,
+                      xs: `normal normal 400 normal 14px/29px ${Fonts.secondary}`,
+                      sm: `normal normal 400 normal 14px/28px ${Fonts.secondary}`,
                     },
                     color: Colors.light,
-                    width: "80%",
+                    width: "100%",
+                    textAlign: { xs: "center", sm: "left" },
                   }}
                 >
                   Our goal for the Educate Her scholarship program in the
@@ -358,36 +387,6 @@ export default function Scholarship() {
                   and communities. This endeavour will create pathways to
                   international employment prospects.
                 </Typography>
-                <Box
-                  component="div"
-                  sx={{
-                    maxWidth: 500,
-                    display: "flex",
-                    flexDirection: { xs: "column", sm: "row" },
-                    mt: { xs: 4, md: 6 },
-                  }}
-                >
-                  <Box
-                    onClick={() => router.push(`${goToPortal}/signup`)}
-                    sx={{
-                      padding: "10px 15px 10px 15px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      color: "rgba(230, 244, 237, 1)",
-                      borderRadius: "46px",
-                      font: `normal normal 500 normal 14px/16.8px ${Fonts.secondary}`,
-                      background: Colors.primary,
-                      "&:hover": {
-                        background: Colors.primary,
-                      },
-                    }}
-                  >
-                    Apply Now
-                    <ArrowUp />
-                  </Box>
-                </Box>
               </Box>
             </Box>
           </Box>
@@ -463,12 +462,13 @@ export default function Scholarship() {
             alignSelf: "center",
             display: "flex",
             flexDirection: "column",
-            width: "80%",
-            mx: 'auto',
+            width: { xs: "100%", sm: "80%" },
+            mx: "auto",
             justifyContent: "center",
             mt: 8,
-            backgroundColor: '#F6F7F7',
-            py: 10
+            backgroundColor: "#F6F7F7",
+            py: 10,
+            borderRadius: "10px",
           }}
         >
           <Box
@@ -526,100 +526,147 @@ export default function Scholarship() {
             you meet all requirements before applying.
           </Typography>
 
-
-         
-        <Box
-          sx={{
-            width: "90%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            mb: "10",
-            mt: "20",
-            mx: 'auto',
-            py: 5 ,
-            backgroundColor: Colors.light
-          }}
-        >
           <Box
             sx={{
               width: "70%",
               display: "flex",
               flexDirection: "column",
-              gap: "22px",
+              justifyContent: "center",
+              mb: "10",
+              mt: "20",
               mx: "auto",
+              py: 5,
+              backgroundColor: Colors.light,
+              borderRadius: "10px",
             }}
           >
-            <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
-              <Box>
-                <ChildCareRounded />
-              </Box>{" "}
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="div"
+            <Box
+              sx={{
+                width: "80%",
+                display: "flex",
+                flexDirection: "column",
+                gap: "32px",
+                mx: "auto",
+              }}
+            >
+              <Box
                 sx={{
-                  font: {
-                    xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                    sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                  },
-                  color: Colors.secondary,
-                  letterSpacing: "0em",
-                  textAlign: "left",
+                  width: "100%",
+                  display: "flex",
+                  gap: "22px",
+                  alignItems: "center",
                 }}
               >
-                All our Scholarsips are Available to both Male and Female
-                applicants from all Geo-political zones within Nigeria.
-              </Typography>
-            </Box>
+                <Box
+                  sx={{
+                    border: `1px solid ${Colors.primary} `,
+                    pb: 1,
+                    px: 1,
+                    pt: 1.5,
+                    borderRadius: 3,
+                    alignItems: "center",
+                  }}
+                >
+                  <AllGenderIcon />
+                </Box>{" "}
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    font: {
+                      xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                      sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                    },
+                    color: Colors.secondary,
+                    letterSpacing: "0em",
+                    textAlign: "left",
+                  }}
+                >
+                  All our Scholarsips are Available to both Male and Female
+                  applicants from all Geo-political zones within Nigeria.
+                </Typography>
+              </Box>
 
-            <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
-              <Box>
-                <DocumentScannerRounded />
-              </Box>{" "}
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="div"
+              <Box
                 sx={{
-                  font: {
-                    xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                    sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                  },
-                  color: Colors.secondary,
-                  letterSpacing: "0em",
-                  textAlign: "left",
+                  width: "100%",
+                  display: "flex",
+                  gap: "22px",
+                  alignItems: "center",
                 }}
               >
-                All our Scholarships applicants must possess a minimum of
-                O’level certificate.
-              </Typography>
-            </Box>
+                <Box
+                  sx={{
+                    border: `1px solid ${Colors.primary} `,
+                    pb: 1,
+                    px: 1,
+                    pt: 1.5,
+                    borderRadius: 3,
+                    alignItems: "center",
+                  }}
+                >
+                  <DocsIcon />
+                </Box>{" "}
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    font: {
+                      xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                      sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                    },
+                    color: Colors.secondary,
+                    letterSpacing: "0em",
+                    textAlign: "left",
+                  }}
+                >
+                  All our Scholarships applicants must possess a minimum of
+                  O’level certificate.
+                </Typography>
+              </Box>
 
-            <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
-              <Box>
-                <ZapIcon width="30" />
-              </Box>{" "}
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="div"
+              <Box
                 sx={{
-                  font: {
-                    xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                    sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
-                  },
-                  color: Colors.secondary,
-                  letterSpacing: "0em",
-                  textAlign: "left",
+                  width: "100%",
+                  display: "flex",
+                  gap: "22px",
+                  alignItems: "center",
                 }}
               >
-                All applicants must be willing to commit and finish the program.
-              </Typography>
+                <Box
+                  sx={{
+                    border: `1px solid ${Colors.primary} `,
+                    pb: 1,
+                    px: 1,
+                    pt: 1.5,
+                    borderRadius: 3,
+                    alignItems: "center",
+                  }}
+                >
+                  <BoltsIcon width="20" />
+                </Box>{" "}
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    font: {
+                      xs: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                      sm: `normal normal 400 normal 14px/18px ${Fonts.inter}`,
+                    },
+                    color: Colors.secondary,
+                    letterSpacing: "0em",
+                    textAlign: "left",
+                  }}
+                >
+                  All applicants must be willing to commit and finish the
+                  program.
+                </Typography>
+              </Box>
             </Box>
           </Box>
-        </Box>
-
         </Box>
       </Box>
     </div>
