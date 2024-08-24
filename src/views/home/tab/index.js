@@ -132,6 +132,16 @@ const cards = [
     image: '/images/data-science.jpg',
     icon: '/images/eduvacity-logo.svg',
   },
+  {
+    name: '',
+    program: 'Assetium 100% Scholarship',
+    description:
+      'Frontend development is pivotal in shaping user experiences and interfaces across digital platforms this Bootcamp program equips students with the latest tools and techniques in web development and responsive design principles.',
+    duration: '6 weeks',
+    type: 'scholarship',
+    image: '/images/front-end.jpg',
+    icon: '/images/eduvacity-logo.svg',
+  },
 ];
 
 export function TabPanel(props) {

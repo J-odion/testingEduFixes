@@ -9,7 +9,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { ArrowUp, PlayButton, WhatsApp, ZapIcon } from "../../src/components/svg";
+import { AllGenderIcon, ArrowUp, BoltsIcon, DocsIcon, PlayButton, WhatsApp, ZapIcon } from "../../src/components/svg";
 // import { ArrowUp, PlayButton, WhatsApp, ZapIcon } from "../src/components/svg";
 import { Colors } from "../../src/components/themes/colors";
 import { Fonts } from "../../src/components/themes/fonts";
@@ -51,7 +51,7 @@ export default function Assetium() {
       >
         <Box
           sx={{
-            width: "80%",
+            width: {xs:"100%", sm: "80%"},
             mx: 'auot',
             display: "flex",
             flexDirection: "column",
@@ -60,6 +60,7 @@ export default function Assetium() {
             px: { xs: "1rem", sm: "1rem", lg: 12.5, xl: 16 },
             gap: { xs: 4, sm: 8 },
             backgroundColor: Colors.light,
+            borderRadius: '10px'
           }}
         >
           <Box
@@ -127,7 +128,7 @@ export default function Assetium() {
                   sx={{
                     // maxWidth: 500,
                     display: "flex",
-                    flexDirection: { xs: "column", sm: "row" },
+                    flexDirection: { xs: "row", sm: "row" },
                     gap: "24px",
                     mt: { xs: 4, md: 12 },
                     justifyContent: "center",
@@ -185,10 +186,10 @@ export default function Assetium() {
 
             <Box
               sx={{
-                width: "60%",
+                width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                gap: "16px",
+                gap: "35px",
                 mx: 'auto'
               }}
             >
@@ -199,7 +200,7 @@ export default function Assetium() {
                     xs: `normal normal 400 normal 30px/36px ${Fonts.primary}`,
                     md: `normal normal 600 normal 36px/44px ${Fonts.primary}`,
                   },
-                  color: Colors.dark,
+                  color: Colors.secondary,
                   m: 0,
                   p: 0,
                   letterSpacing: "-2%",
@@ -221,7 +222,7 @@ export default function Assetium() {
                       xs: `normal normal 400 normal 16px/28px ${Fonts.secondary}`,
                       sm: `normal normal 500 normal 20px/30px ${Fonts.secondary}`,
                     },
-                    color: Colors.grey,
+                    color: Colors.secondary,
                   }}
                 >
                   {EMPOWERMENT_DESC}
@@ -311,7 +312,7 @@ export default function Assetium() {
                 width: "100%",
                 display: "flex",
                 flexDirection: { xs: "column", sm: "row" },
-                gap: { xs: "40px", sm: "80px" },
+                gap: { xs: "40px", sm: "10px" },
               }}
             >
               <Box
@@ -324,7 +325,7 @@ export default function Assetium() {
                 <Typography
                   variant="h1"
                   sx={{
-                    maxWidth: { xs: 340, sm: 1260 },
+                    // maxWidth: { xs: 340, sm: 1260 },
                     font: {
                       xs: `normal normal 600 normal 32px/48px ${Fonts.primary}`,
                       md: `normal normal 600 normal 50px/77px ${Fonts.primary}`,
@@ -336,61 +337,32 @@ export default function Assetium() {
                 </Typography>
               </Box>
               <Box
-                component="div"
                 sx={{
-                  maxWidth: 1050,
+                  width: "100%",
                   display: "flex",
-                  flexDirection: "column",
-                  textAlign: "left",
+                 
                 }}
               >
                 <Typography
-                  variant="h1"
+                gutterBottom
+                  variant="h6"
                   sx={{
                     font: {
                       xs: `normal normal 400 normal 14px/18px ${Fonts.secondary}`,
                       sm: `normal normal 400 normal 14px/18px ${Fonts.secondary}`,
                     },
                     color: Colors.light,
-                    width: "80%",
+                    width: "100%",
+                    textAlign: "left",
                   }}
                 >
                   Our goal for the Educate Her scholarship program in the
-                  upcoming five years is to empower 20,000 women in Northern
-                  Nigeria to attain accredited certifications from their homes
-                  and communities. This endeavour will create pathways to
+                  upcoming <br /> five years is to empower 20,000 women in Northern
+                  Nigeria to attain <br />  accredited certifications from their homes
+                  and communities. This <br /> endeavour will create pathways to
                   international employment prospects.
                 </Typography>
-                <Box
-                  component="div"
-                  sx={{
-                    maxWidth: 500,
-                    display: "flex",
-                    flexDirection: { xs: "column", sm: "row" },
-                    mt: { xs: 4, md: 6 },
-                  }}
-                >
-                  <Box
-                    onClick={() => router.push(`${goToPortal}/signup`)}
-                    sx={{
-                      padding: "10px 15px 10px 15px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      color: "rgba(230, 244, 237, 1)",
-                      borderRadius: "46px",
-                      font: `normal normal 500 normal 14px/16.8px ${Fonts.secondary}`,
-                      background: Colors.primary,
-                      "&:hover": {
-                        background: Colors.primary,
-                      },
-                    }}
-                  >
-                    Apply Now
-                    <ArrowUp />
-                  </Box>
-                </Box>
+                
               </Box>
             </Box>
           </Box>
@@ -466,12 +438,13 @@ export default function Assetium() {
             alignSelf: "center",
             display: "flex",
             flexDirection: "column",
-            width: "80%",
+            width: {xs:"100%", sm: "80%"},
             mx: 'auto',
             justifyContent: "center",
             mt: 8,
             backgroundColor: '#F6F7F7',
-            py: 10
+            py: 10,
+            borderRadius: "10px"
           }}
         >
           <Box
@@ -529,11 +502,9 @@ export default function Assetium() {
             you meet all requirements before applying.
           </Typography>
 
-
-         
         <Box
           sx={{
-            width: "90%",
+            width: "70%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -541,7 +512,8 @@ export default function Assetium() {
             mt: "20",
             mx: 'auto',
             py: 5 ,
-            backgroundColor: Colors.light
+            backgroundColor: Colors.light,
+            borderRadius: '10px'
           }}
         >
           <Box
@@ -553,9 +525,9 @@ export default function Assetium() {
               mx: "auto",
             }}
           >
-            <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
+            <Box sx={{ width: "100%", display: "flex", gap: "12px", alignItems: 'center' }}>
               <Box>
-                <ChildCareRounded />
+                <AllGenderIcon  />
               </Box>{" "}
               <Typography
                 gutterBottom
@@ -576,9 +548,9 @@ export default function Assetium() {
               </Typography>
             </Box>
 
-            <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
-              <Box>
-                <DocumentScannerRounded />
+            <Box sx={{ width: "100%", display: "flex", gap: "12px", alignItems: 'center' }}>
+              <Box sx={{ borderWidth: "1px", borderColor: Colors.primary, padding: '2px', borderRadius:'3px'}}>
+                <DocsIcon  />
               </Box>{" "}
               <Typography
                 gutterBottom
@@ -599,9 +571,9 @@ export default function Assetium() {
               </Typography>
             </Box>
 
-            <Box sx={{ width: "100%", display: "flex", gap: "12px" }}>
+            <Box sx={{ width: "100%", display: "flex", gap: "12px", alignItems: 'center' }}>
               <Box>
-                <ZapIcon width="30" />
+                <BoltsIcon width="20" />
               </Box>{" "}
               <Typography
                 gutterBottom
