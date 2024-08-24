@@ -39,7 +39,6 @@ export const partners = [
     name: 'Assetium Capital Management Limited',
     logo: '/images/assetium-logo.png',
   },
-  // { name: 'Ahmadu Bello University', logo: '/images/abu-logo.png' },
 ];
 
 const communityImages = [
