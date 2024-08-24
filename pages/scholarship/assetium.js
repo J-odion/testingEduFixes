@@ -190,7 +190,8 @@ export default function Assetium() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "35px",
-                mx: 'auto'
+                mx: 'auto', 
+                my: 'autp'
               }}
             >
               <Typography
